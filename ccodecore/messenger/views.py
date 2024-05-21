@@ -1,11 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
-from ccodecore.main.models.User import User
+from main.models.User import User
 
 
 def index(request):
-    all_users = User.objects.all()
+    all_users = User.objects.filter(nickname='test')
 
     print(all_users)
 

@@ -1,5 +1,5 @@
 from django.db import models
-from ccodecore.main.models import User
+from main.models import User
 
 
-class Chat(models.Model):
+#class Chat(models.Model):
