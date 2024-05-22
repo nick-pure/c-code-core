@@ -3,9 +3,9 @@ from django.shortcuts import render
 from main.models.User import User
 
 
-def index(request):
-    all_users = User.objects.filter(nickname='test')
+def test_re(request, req):
+    if request.GET:
+        print(request.GET)
 
-    print(all_users)
+    return HttpResponse(f'<p>{req}</p>')
 
-    return HttpResponse(f'<h1>Test<h1>')

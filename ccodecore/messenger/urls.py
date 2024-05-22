@@ -1,6 +1,8 @@
 from .views import *
-from django.urls import path
+from django.urls import path, re_path
 
 urlpatterns = [
-    path('index/', index)
+    re_path(r'^(?P<req>[0-9]{1})/', test_re),
 ]
+
+
