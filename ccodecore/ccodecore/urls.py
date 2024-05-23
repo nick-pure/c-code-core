@@ -4,7 +4,7 @@ from main.urls import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include('messenger.urls')),
+    path("", include('messenger.urls'), name='main'),
     path("", include('main.urls'))
 ]
 
