@@ -3,9 +3,25 @@ from django.shortcuts import render, redirect
 from main.models.User import User
 
 
-def test_re(request, req):
-    if int(req) == 1:
-        return redirect('main', permanent=True)
+menu = ["Create a chat", "Find friends", "Build a house"]
 
-    return HttpResponse(f'<p>{req}</p>')
+def test_menu(request):
+    return render(
+        request,
+        'messenger/messenger_main.html',
+        {
+            'title': 'Messenger',
+            'menu': menu,
+        },
+    )
 
+
+def users_online(request):
+    online_users = User.objects.filter(is_active=True)
+    return render(
+        request,
+        'messenger/online_users.html',
+        {
+            'online': online_users,
+        },
+    )
