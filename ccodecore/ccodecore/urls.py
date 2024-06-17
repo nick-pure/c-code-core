@@ -8,4 +8,4 @@ urlpatterns = [
     path("", include('main.urls'), name='main')
 ]
 
-handler404 = pageError
+handler404 = page_error

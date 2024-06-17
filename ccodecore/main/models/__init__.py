@@ -1,4 +1,4 @@
-# my_package/__init__.py
+from .User import *
 
 import os
 import pkgutil
