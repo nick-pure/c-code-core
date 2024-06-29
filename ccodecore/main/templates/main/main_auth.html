@@ -1,13 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link type="text/css" href="{% static 'main/css/styles.css' %}" rel="stylesheet"/>
 </head>
 <body>
-
-<a href="register/">Register</a>
-<a href="login/">Login</a>
-
+  <div class="welcome-container">
+    <img class="logo" src="{% static 'main/images/tyan.png' %}" alt="Logo">
+    <h1>Welcome to C++Code Social Network</h1>
+    <p class="description">Solve tasks,  Make friends, Share your experience.</p>
+    <a href="{% url 'login' %}" class="btn">Login</a>
+    <a href="{% url 'register' %}" class="btn">Register</a>
+  </div>
+  <div class="footer">
+    <div class="footer_text">
+      <p> Contact info:</p>
+    <a href="{% url 'contacts' %}">Contact us</a>
+    </div>
+  </div>
 </body>
 </html>

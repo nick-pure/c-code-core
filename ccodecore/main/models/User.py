@@ -12,7 +12,7 @@ class User(AbstractUser):
     photo = models.ImageField(upload_to='uploads/', blank=True, )
 
     password = models.CharField(max_length=255)
-    email = models.CharField(max_length=255, null=False, blank=False)
+    email = models.EmailField(max_length=255, null=False, blank=False)
 
     last_login = models.DateTimeField(auto_now_add=True, null=False, blank=False)
     is_active = models.BooleanField(default=True)
